@@ -22,3 +22,51 @@
 if ( ! defined( 'ABSPATH' ) ) exit;
 
 require_once __DIR__ . '/vendor/autoload.php';
+
+use IsaacBookstore\includes\Activator;
+use IsaacBookstore\includes\DeActivator;
+
+/**
+ * Currently plugin version.
+ * Start at version 1.0.0 and use SemVer - https://semver.org
+ * Rename this for your plugin and update it as you release new versions.
+ */
+define( 'ISAAC_BOOKSTORE_VERSION', '1.0.0' );
+
+if ( ! class_exists( 'Plugin' ) ) :
+
+class Plugin {
+
+    private static $instance;
+
+    private function __construct() {
+
+        self::Main();
+    }
+
+
+    public static function Main() {
+    }
+
+
+    public static function instance() {
+        if ( is_null( ( self::$instance ) ) ) {
+            self::$instance = new self();
+        }
+
+        return self::$instance;
+    }
+
+
+    public function activate() {
+         Activator::activate();
+    }
+
+
+    public function deactivate() {
+       DeActivator::deActivate();
+    }
+}
+
+endif;
+Plugin::instance();
