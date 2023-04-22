@@ -28,7 +28,7 @@ use IsaacBookstore\includes\Activator;
 use IsaacBookstore\includes\DeActivator;
 use IsaacBookstore\includes\PostType;
 use IsaacBookstore\includes\Taxonomy;
-
+use IsaacBookstore\includes\Metabox;
 /**
  * Currently plugin version.
  * Start at version 1.0.0 and use SemVer - https://semver.org
@@ -64,13 +64,15 @@ class Plugin {
         // Registers the Book post type
         $postType = new PostType('Books', 'Book', ISAAC_BOOK_STORE_NAME);
         $postType->run();
-        // Registers Genre  taxonomy to the Book post type
+        // Registers Genre taxonomy to the Book post type
         $genre = new Taxonomy('Genres', 'Genre', 'book', ISAAC_BOOK_STORE_NAME);
         $genre->run();
         // Registers Author taxonomy to the Book post type
         $author = new Taxonomy('Authors', 'Author', 'book', ISAAC_BOOK_STORE_NAME);
         $author->run();
-        // Register the Book Information metabox
+        // Registers the Book Information metabox
+        $metabox = new Metabox(ISAAC_BOOK_STORE_NAME);
+        $metabox->run();
     }
 
 
