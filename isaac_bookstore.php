@@ -41,6 +41,15 @@ class Plugin {
     private static $instance;
 
     private function __construct() {
+        register_activation_hook(
+            __FILE__,
+            array( $this, 'activate' )
+        );
+
+        register_deactivation_hook(
+            __FILE__,
+            array( $this, 'deactivate' )
+        );
 
         self::Main();
     }
