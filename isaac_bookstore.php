@@ -26,6 +26,7 @@ require_once __DIR__ . '/vendor/autoload.php';
 
 use IsaacBookstore\includes\Activator;
 use IsaacBookstore\includes\DeActivator;
+use IsaacBookstore\includes\PostType;
 
 /**
  * Currently plugin version.
@@ -56,6 +57,11 @@ class Plugin {
 
 
     public static function Main() {
+        // Registers the Book post type
+        $postType = new PostType('Books', 'Book', 'isaac_bookstore');
+        $postType->run();
+        // Registers Genre And Author taxonomy to the Book post type
+        // Register the Book Information metabox
     }
 
 

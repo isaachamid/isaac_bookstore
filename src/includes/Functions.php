@@ -1,4 +1,7 @@
 <?php
+/**
+ * Some helper functions
+*/
 
 if ( ! function_exists( 'ddd' ) ) :
     function ddd($data)
