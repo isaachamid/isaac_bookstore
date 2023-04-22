@@ -65,11 +65,11 @@ class Plugin {
         $postType = new PostType('Books', 'Book', ISAAC_BOOK_STORE_NAME);
         $postType->run();
         // Registers Genre  taxonomy to the Book post type
-        $taxonomies = new Taxonomy('Genres', 'Genre', 'book', ISAAC_BOOK_STORE_NAME);
-        $taxonomies->run();
+        $genre = new Taxonomy('Genres', 'Genre', 'book', ISAAC_BOOK_STORE_NAME);
+        $genre->run();
         // Registers Author taxonomy to the Book post type
-        $taxonomies = new Taxonomy('Authors', 'Author', 'book', ISAAC_BOOK_STORE_NAME);
-        $taxonomies->run();
+        $author = new Taxonomy('Authors', 'Author', 'book', ISAAC_BOOK_STORE_NAME);
+        $author->run();
         // Register the Book Information metabox
     }
 
