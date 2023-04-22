@@ -1,0 +1,18 @@
+{
+    "name": "isaac/isaac_bookstore",
+    "description": "Wordpress Plugin Book Store With Custom Taxonomy",
+    "type": "wordpress-plugin",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "IsaacBookstore\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "hamidisaac",
+            "email": "isaac.hamid@gmail.com"
+        }
+    ],
+    "require": {}
+}
