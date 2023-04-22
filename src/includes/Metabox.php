@@ -10,7 +10,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 class Metabox {
     public $plugin_name;
 
-	public function __construct() {
+	public function __construct($plugin_name) {
         $this->plugin_name = $plugin_name;
 	}
 
