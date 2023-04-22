@@ -1,0 +1,11 @@
+<?php
+
+if ( ! function_exists( 'ddd' ) ) :
+    function ddd($data)
+    {
+        echo '<pre>';
+        var_dump($data);
+        echo '</pre>';
+        exit();
+    }
+endif;

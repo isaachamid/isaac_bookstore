@@ -21,6 +21,7 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit;
 
+require_once __DIR__ ."/src/includes/Functions.php";
 require_once __DIR__ . '/vendor/autoload.php';
 
 use IsaacBookstore\includes\Activator;
